@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            min-height: 100vh;
+            padding-top: 400px;
+        }
+
+        .card{
+            position: relative;
+            /* position: absolute; */
+            /* color: #69606b; */
+            padding-bottom: 10px;
+            color: black;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 230px;
+            /* height: 200px; */
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 10px 10px 30px gray;
+            /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+            border:3px solid black;
+        }
+        .video-img{
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 15px;
+            /* width: 150px; */
+            height: 120px;
+            border-radius: 10px;
+            /* position: absolute; */
+            /* left: 50%; */
+            /* top: 10px; */
+            /* transform: translateX(-50%); */
+            border:2px solid black;
+            background-color: black;
+        }
+        .line-box{
+            z-index: -100;
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            transform: translateX(-35%);
+            width: 100px;
+            height: 100px;
+            /* background-color: pink; */
+            background-image: url("./line.png");
+            background-size: cover;
+        }
+
+        .eyes-box{
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            position: relative;
+            display: flex;
+            top: 20px;
+            justify-content: space-between;
+            /* margin: 0;             */
+        }
+
+        .eye{
+            width: 50px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: black;
+        }
+
+        .eye:nth-child(1){
+            transform: rotate(-30deg);
+        }
+
+        .eye:nth-last-child(1){
+            transform: rotate(30deg);
+        }
+
+        .dot-box{
+            width: 90%;
+            /* left: 50%; */
+            /* transform: translateX(-50%); */
+            /* position: absolute; */
+            margin: 0 auto;
+            bottom:25px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dot{
+            border-radius: 2px;
+
+            /* background-color: black; */
+        }
+
+        .dot img{
+            width: 15px;
+            height: 15px;
+            vertical-align: middle;
+        }
+        .dot span{
+            vertical-align: middle;
+            font-size: 12px;
+        }   
+        .emoji{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            /* position: absolute; */
+            bottom: -20px;
+            margin: 0;
+            /* left: 50%; */
+            /* transform: translateX(-50%); */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="eyes-box">
+            <div class="eye">
+
+            </div>
+            <div class="eye">
+
+            </div>
+        </div>  
+
+        <div class="line-box">
+
+        </div>
+        <p class="emoji">ㅅ</p>
+
+        <img class="video-img" src="./test.jpg" alt="">
+        <div class="dot-box">
+            <div class="dot">
+                <img src="./play.png" alt="">&nbsp;<span>3.5亿</span>
+            </div>
+            <div class="dot">
+                <img src="./message.png" alt="">&nbsp;<span>4983枚</span>
+            </div>
+            <div class="dot">
+                <img src="./user.png" alt="">&nbsp;<span>爬墙的少年</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
