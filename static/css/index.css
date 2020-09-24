@@ -7,6 +7,7 @@ body{
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    overflow-x: hidden;
 }
 *{
     margin: 0;
@@ -19,6 +20,50 @@ body{
     display: block;
     clear: both;
 }
+
+.show{
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 1s;
+}
+.show2{
+    visibility: visible;
+    opacity: 1;
+    /* transition-duration: 1s; */
+}
+
+.absolute{
+    position: absolute;
+}
+
+
+.hidden{
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 1s;
+    /* animation-name: fadeout;
+    animation-duration: 3s; */
+}
+
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.overhideenx{
+    overflow-x: hidden;
+}
+
+.overhideeny{
+    overflow-y: hidden;
+}
+
+
 
 .header{
     height: 50px;
@@ -40,6 +85,47 @@ body{
     display: inline-block;
 }
 
+.mabu{
+    width: 100vw;
+    height: 100vh;
+    z-index: 300;
+    top: 0;
+    position: fixed;
+    background-color: rgba(236, 244, 243, 0.6);
+}
+
+.danmu-box{
+    position: fixed;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 300;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+    width: 30vw;
+    height: 30vw;
+}
+
+.danmu-img{
+    border-radius: 10px;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.danmu-loading-gif{
+    border-radius: 10px;
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
 
 .handle-Box{
     width: 90vw;
@@ -53,6 +139,7 @@ body{
 }
 
 .handle-btn{
+    z-index: 300;
     width: 50px;
     height: 50px;
     margin: 0 10px;
@@ -68,6 +155,7 @@ body{
 }
 
 .handle-btn2{
+    z-index: 300;
     width: 50px;
     height: 50px;
     margin: 0 10px;
@@ -98,7 +186,7 @@ body{
     /* justify-content: space-evenly; */
     width: 90vw;
     margin: 30px auto;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     border-radius: 10px;
     transition-duration: 1s;
     /* box-shadow: 0 0 30px #f0f0f0; */
@@ -114,7 +202,8 @@ body{
     height: 35vh;   
     text-align: center;
     display: inline-block;
-    margin-top: 30px;
+    margin: 60px auto;
+    /* margin-top: 80px; */
 }
 
 .card{
@@ -136,6 +225,27 @@ body{
     box-shadow: 10px 10px 30px gray;
     /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
     border:3px solid black;
+}
+.loading-card{
+    position: absolute;
+    /* position: absolute; */
+    /* color: #69606b; */
+    /* padding-bottom: 10px; */
+    color: black;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 230px;
+    height: 28vh;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 30px gray;
+    /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+    border:3px solid black;
+    padding-bottom: 10px;
 }
 .loading-gif{
     width: 75%;
@@ -166,14 +276,29 @@ body{
     /* top: 10px; */
     /* transform: translateX(-50%); */
     border:2px solid black;
-    background-color: black;
+    /* background-color: black; */
     cursor: pointer;
-
+}
+.loading-img{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    /* width: 150px; */
+    height: 120px;
+    border-radius: 10px;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* top: 10px; */
+    /* transform: translateX(-50%); */
+    border:2px solid black;
+    /* background-color: black; */
+    cursor: pointer;
 }
 .line-box{
     z-index: -100;
     position: absolute;
-    top: -30%;
+    top: -25%;
     left: 50%;
     transform: translateX(-35%);
     width: 100px;
@@ -211,6 +336,15 @@ body{
     transform: rotate(30deg);
 }
 
+.title{
+    font-size: 13px;
+    margin: 10px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .dot-box{
     width: 90%;
     /* left: 50%; */
@@ -227,6 +361,11 @@ body{
     border-radius: 2px;
     cursor: pointer;
     /* background-color: black; */
+
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 
@@ -245,6 +384,8 @@ body{
 .dot2 span{
     vertical-align: middle;
     font-size: 12px;
+
+    /*  */
 } 
 
 
@@ -276,4 +417,18 @@ body{
     margin: 0;
     /* left: 50%; */
     /* transform: translateX(-50%); */
+}
+
+@media only screen and (max-width:800px){
+    .danmu-box{
+        position: fixed;
+        border-radius: 10px;
+        background-color: white;
+        z-index: 300;
+        left: 50%;
+        top: 150px;
+        transform: translateX(-50%);
+        width: 70vw;
+        height: 70vw;
+    }
 }
